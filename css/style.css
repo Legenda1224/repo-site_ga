@@ -1051,6 +1051,30 @@ footer{
 	}
 }
 
+@media screen and (max-width:900px){
+	ul.menu{
+		display:flex;
+	}
+}
+
+@media screen and (max-width:600px){
+	ul.menu{
+		display:flex;
+	}
+}
+
+
+@media screen and (max-width:900px){
+	#t{
+		display:flex;
+	}
+}
+
+@media screen and (max-width:600px){
+	#t{
+		display:flex;
+	}
+}
 
 
 
