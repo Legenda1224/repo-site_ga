@@ -741,7 +741,7 @@ a{
 }
 
 .clients5{
-    background-color:#A9A9A9;
+        background-color:#A9A9A9;
 	position:absolute;
 	margin-left:-70px;
 	margin-top:495px;
@@ -852,7 +852,7 @@ footer{
 
 
 #lott2{
-		padding-bottom:10px;
+	padding-bottom:10px;
 	border-bottom:1px solid gray;
 	font-family:arial black;
 	margin-left:750px;
@@ -1024,7 +1024,7 @@ footer{
 	height:20px;
 }
 #pus{
-	  background-color:#A9A9A9;
+	background-color:#A9A9A9;
 	position:absolute;
 	margin-left:-70px;
 	margin-top:365px;
@@ -1040,13 +1040,7 @@ footer{
 
 
 @media screen and (max-width:992px){
-	.selector{
-		width:400px;
-		height:200px;
-	}
-	display:flex;{
-		width:100%;
-	}
+
 }
 
 
