@@ -1040,8 +1040,14 @@ footer{
 
 
 @media screen and (max-width:992px){
-	body{
-		background-color:red;
+	div.selector{
+		display:flex;
+	}
+}
+
+@media screen and (max-width:600px){
+	div.selector{
+		display:flex;
 	}
 }
 
