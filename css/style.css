@@ -1042,24 +1042,28 @@ footer{
 @media screen and (max-width:992px){
 	div.selector{
 		display:flex;
+		height:50%;
 	}
 }
 
 @media screen and (max-width:600px){
 	div.selector{
 		display:flex;
+		height:50%;
 	}
 }
 
 @media screen and (max-width:900px){
 	ul.menu{
 		display:flex;
+		height:50%;
 	}
 }
 
 @media screen and (max-width:600px){
 	ul.menu{
 		display:flex;
+		height:50%;
 	}
 }
 
@@ -1067,12 +1071,14 @@ footer{
 @media screen and (max-width:900px){
 	#t{
 		display:flex;
+		height:50%;
 	}
 }
 
 @media screen and (max-width:600px){
 	#t{
 		display:flex;
+		height:50%;
 	}
 }
 
