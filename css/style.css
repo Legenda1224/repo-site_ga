@@ -1062,6 +1062,55 @@ height:310px;
 }
 
 
+@media screen and (max-width:900px){
+	.pod_osnova{
+		
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.menu{
+		width:50px;
+		height:50px;
+		font-size:10px;
+		top:0px;
+		left:-330px;
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.pod_block{
+		width:100px;
+		left:-350px;
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.pod_block #znak{
+		top:-40px;
+		width:230px;
+		left:0px;
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.pod_block #zakaz{
+		top:-299px;
+		width:230px;
+		left:150px;
+		display:flex;
+		flex-wrap:wrap;
+	}
+		.osnova_img{
+		display:flex;
+		flex-wrap:wrap;
+	}
+		.pod_block3{
+		width:100px;
+		left:-350px;
+		display:flex;
+		flex-wrap:wrap;
+	}
+	.block4{
+		display:flex;
+	}
+}
 
 
 
