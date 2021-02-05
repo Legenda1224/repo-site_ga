@@ -3,6 +3,79 @@ body{
 	margin:0;
 	padding:0;
 }
+
+@media screen and (max-width:900px){
+	.osnova{
+		width:25%;
+	}
+		.menu{
+		flex-wrap:wrap;
+		width:25%;
+	}
+		.pod_block{
+		top:-30px;
+		font-size:9px;
+		left:-400px;
+		width:65%;
+		height:89%;
+		
+	}
+	#znak{
+		top:-50px;
+		left:175px;
+	}
+	#pod_znak{
+		
+		margin-top:-40px;
+		margin-left:305px;
+	}
+	#zakaz{
+		margin-top:160px;
+		margin-left:-175px;
+	}
+		#pod_zakaz{
+	
+		margin-top:0px;
+		margin-left:-330px;
+	}
+	.pod_block2{
+	}
+	#pustota1{
+		margin-left:-430px;
+	}
+		#pustota2{
+		margin-left:-800px;
+	}
+		#pustota3{
+		left:-55px;
+	}
+	.osnova_img{
+		margin-left:-100px;
+		flex-wrap:wrap;
+		display:flex;
+		width:500px;
+	}
+	.pod_block3{
+		width:25%;
+		flex-wrap:wrap;
+	}
+	.block4{
+		
+	}
+	.border1{
+	
+	
+	}
+		.border2{
+		
+	}
+}
+
+
+
+
+
+
 .osnova{
 	position:absolute;
 	width:100%;
@@ -71,7 +144,7 @@ ul{
 	position:absolute;
 	width:100%;
 	height:500px;
-	background-color:green;
+	
 }
 .pod_block {
 	margin-left:500px;
@@ -1060,71 +1133,3 @@ height:310px;
 	color:gray;
 	text-align:center;
 }
-
-
-@media screen and (max-width:900px){
-	.pod_osnova{
-		
-		display:flex;
-		flex-wrap:wrap;
-	}
-	.menu{
-		width:50px;
-		height:50px;
-		font-size:10px;
-		top:0px;
-		left:-330px;
-		display:flex;
-		flex-wrap:wrap;
-	}
-	.pod_block{
-		width:100px;
-		left:-350px;
-		display:flex;
-		flex-wrap:wrap;
-	}
-	.pod_block #znak{
-		top:-40px;
-		width:230px;
-		left:0px;
-		display:flex;
-		flex-wrap:wrap;
-	}
-	.pod_block #zakaz{
-		top:-299px;
-		width:230px;
-		left:150px;
-		display:flex;
-		flex-wrap:wrap;
-	}
-		.osnova_img{
-		display:flex;
-		flex-wrap:wrap;
-	}
-		.pod_block3{
-		width:100px;
-		left:-350px;
-		display:flex;
-		flex-wrap:wrap;
-	}
-	.block4{
-		display:flex;
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
