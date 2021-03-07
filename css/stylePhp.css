@@ -1,0 +1,102 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+.cont{
+	top:0;
+	position:fixed;
+	width:100%;
+	background:black;
+	height:60px;
+}
+.pod_cont{
+	left:27%;
+	position:absolute;
+	display:inline-flex;
+	
+}
+.pod_cont a{
+	font-size:15px;
+	font-family:arial;
+	border-bottom:1px solid gold;
+	padding:20px;
+	color:gold;
+	text-decoration:none;
+	
+	
+	
+}
+.pod_cont a:hover{
+	margin:0px;
+	border-radius:25px;
+	border:2px solid orange;
+	color:white;
+	background:black;
+	transition:.4s;
+	
+}
+
+.gl_text{
+	padding-top:20px;
+}
+.text1{
+	padding-top:20px;
+	margin-left:px;
+}
+
+.foon{
+	width:765px;
+	height:100hv;
+	margin-left:280px;
+}
+h2{
+	font-size:30px;
+	margin-top:100px;
+	color:green;
+	font-family:arial black;
+	text-align:center;
+}
+
+.h2_text{
+	color:#4C5866;
+	font-family:century;
+}
+.h2_text:first-letter{
+	color:black;
+	font-size:60px;
+}
+
+h3{
+	color:green;
+	font-family:arial black;
+	font-size:25px;
+}
+
+.h2_text4{
+	color:#4C5866;
+	font-family:black;
+}
+
+h4{
+	color:black;
+	font-family:arial;
+	font-size:23px;
+}
+
+footer{
+	width:100%;
+	height:70px;
+	background-color:#302b2b;
+}
+
+
+.pod_footer{
+	top:40px;
+	display:flex;
+	justify-content:center;
+	position:relative;
+	font-size:17px;
+	color:white;
+	font-family:century;
+}
