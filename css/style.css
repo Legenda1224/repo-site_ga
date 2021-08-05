@@ -1,15 +1,152 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     padding: 0;
     margin: 0;
 }
 
+/*Бургер меню*/
+
+.burger-menu{
+    display: none;
+}
+.burger-menu_button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 30;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.burger-menu_button:hover .burger-menu_lines {
+    filter: brightness(0.7);
+}
+
+.burger-menu_button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.burger-menu_lines::before,
+.burger-menu_lines::after,
+.burger-menu_lines {
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #ffffff;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.burger-menu_lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.burger-menu_lines::before {
+    content: '';
+    top: -12px;
+}
+.burger-menu_lines::after {
+    content: '';
+    top: 12px;
+}
+
+
+.burger-menu_active .burger-menu_lines {
+    background-color: transparent;
+}
+.burger-menu_active .burger-menu_lines::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+.burger-menu_active .burger-menu_lines::after{
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.burger-menu_nav {
+    padding-top: 120px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: #000000;
+    overflow-y: auto;
+    right: -100%;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+.burger-menu_active .burger-menu_nav {
+    right: 0;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+.burger-menu_link {
+    padding: 18px 35px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: #ffffff;
+    border-bottom: 1px solid #fff;
+}
+.burger-menu_link:first-child {
+    border-top: 1px solid #fff;
+}
+.burger-menu_link:hover {
+    filter: brightness(0.9);
+}
+.burger-menu_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+.burger-menu_active .burger-menu_overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+
+.strelka-img2{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 1240px;
+    top: 570px;
+}
+
+
 .header{
     background-image:linear-gradient(rgba(0,0,0,0.75), rgba(35, 107, 45, 0.15)), url(../img/job-search-600x400.jpg);
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     height: 100vh;
 }
-
+.glavnaya{
+    font-size:19px;
+    font-family: Sedan;
+}
 .menu #text{
     font-family: Sedan;
 	margin:2px;
@@ -25,6 +162,7 @@ body{
 .knopka{
     border-radius: 12px;
     background: #6D28FF;
+    transition: 0.3s ease-in-out;
 }
 .knopka:hover{
     background: white;
@@ -89,41 +227,30 @@ a{
 /*Обо мне*/
 
 .obomne{
-    padding-top: 350px;
+    margin-top: 250px;
 }
-
-.block_obomne{
-    width: 900px;
-    height: 400px;
-    background-color: white;
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block_obomne h3{
+    font-size: 40px;
+    text-align: center;
 }
 
 .block_obomne p{
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
+    font-size: 20px;
     font-family: arial;
-    font-size: 23px;
-}
-
-.block_obomne2{
-    width: 1000px;
-    height: 400px;
-    background-color: black;
-}
-
-.block_obomne2 p{
+    padding-top: 50px;
     text-align: center;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: arial;
-    font-size: 19px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
+
+
+
 
 
 
@@ -131,21 +258,42 @@ a{
 /*Навыки*/
 
 .naviki{
-    background-color: #F4F4F4;
+    background-color: #f5f5f5;
     margin-top: 150px;
 }
 .naviki h3{
+    font-size: 40px;
     text-align: center;
-   padding-top: 50px;
+   padding-top: 100px;
    padding-bottom: 100px;
 }
-
-.index-img{
-    margin: 70px;
-    width: 170px;
-    height: 140px;
+.index-img1{
+    position: relative;
+    top: 50px;
+    margin: 50px;
+    width: 250px;
+ 
 }
-
+.index-img{
+    margin: 50px;
+    margin-top: 5px;
+    width: 250px;
+    height: 160px;
+}
+.index-img-p{
+    position: relative;
+    left: 20px;
+    top: 33px;
+    width: 270px;
+    height: 180px;
+}
+.index-img-m{
+    position: relative;
+    top: 50px;
+    left: 20px;
+    width: 350px;
+    height: 260px;
+}
 
 .kartinki{
     display: flex;
@@ -192,6 +340,7 @@ a{
 	font-family: arial;
 	font-weight: bold;
 	border: none;
+    outline: none;
 	font-size: 16px;
 	padding: 15px;
 	margin: 10px;
@@ -199,6 +348,7 @@ a{
 	height: 50px;
 }
 .work textarea{
+    outline: none;
     font-family: arial;
 	font-weight: bold;
 	font-size: 16px;
@@ -251,36 +401,132 @@ footer p{
     height: 40px;
 }
 
+@media screen and (max-width: 1200px){
 
+.header{
+    background-image:linear-gradient(rgba(0,0,0,0.75), rgba(35, 107, 45, 0.15)), url(../img/job-search-600x400.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 903px;
+}
+.zagolovok{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: -580px;
+    text-align: center;
+}
+.zagolovok h3{
+    color: white;
+    font-size: 70px;
+}
+
+.zagolovok p{
+    padding-top: 90px;
+    font-weight: bold;
+    font-size: 55px;
+    color: #40CF8A;
+}
+.obomne{
+    margin-top: 400px;
+}
+.block_obomne h3{
+    font-size: 40px;
+    text-align: center;
+}
+
+.block_obomne p{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    font-family: arial;
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+}
 
 @media screen and (max-width: 991px){
-    #nomer{
-        display: none;
-    }
-    .zagolovok{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        margin-top: -700px;
-        text-align: center;
-    }
-    .zagolovok h3{
-        color: white;
-        font-size: 65px;
-    }
-    
-    .zagolovok p{
-        padding-top: 90px;
-        font-weight: bold;
-        font-size: 53px;
-        color: #40CF8A;
-    }
-    
+
+.burger-menu{
+    display: block;
+}
+#nomer{
+    display: none;
+}
+.zagolovok{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: -600px;
+    text-align: center;
+}
+.zagolovok h3{
+    color: white;
+    font-size: 60px;
+}
+
+.zagolovok p{
+    padding-top: 90px;
+    font-weight: bold;
+    font-size: 50px;
+    color: #40CF8A;
+}
+
 /*Обо мне*/
 
 .obomne{
-    padding-top: 600px;
+    margin-top: 400px;
+}
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block_obomne h3{
+    font-size: 40px;
+    text-align: center;
 }
 
+.block_obomne p{
+    font-size: 20px;
+    font-family: arial;
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.kartinki{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+}
 
+.index-img1{
+    position: relative;
+    top:-20px;
+    margin: 50px;
+    width: 250px;
+ 
+}
+.index-img{
+    margin: 80px;
+    margin-top: 5px;
+    width: 150px;
+    height: 200px;
+}
+.index-img-p{
+    margin-top: -35px;
+    margin-left: -20px;
+    width: 250px;
+    height: 180px;
+}
+.index-img-m{
+    margin-left: 50px;
+    width: 300px;
+    height: 260px;
+}
 }
 
 @media screen and (max-width: 768px){
@@ -289,7 +535,7 @@ footer p{
     background-image:linear-gradient(rgba(0,0,0,0.75), rgba(35, 107, 45, 0.15)), url(../img/job-search-600x400.jpg);
     background-size: cover;
     width: 100%;
-    height: 500px;
+    height: 573px;
 }
 .zagolovok{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -308,9 +554,35 @@ footer p{
     font-size: 38px;
     color: #40CF8A;
 }
+
+
+
+
+
 .obomne{
-    padding-top: 250px;
+    margin-top: 250px;
 }
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block_obomne h3{
+    font-size: 40px;
+    text-align: center;
+}
+
+.block_obomne p{
+    font-size: 18px;
+    font-family: arial;
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
 /*Навыки*/
 
 .naviki{
@@ -320,14 +592,34 @@ footer p{
 .naviki h3{
     font-size: 30px;
    text-align: center;
-   padding-top: 50px;
+   padding-top: 100px;
    padding-bottom: 50px;
 }
 
+.index-img1{
+    position: relative;
+    top:-20px;
+    margin: 50px;
+    width: 250px;
+ 
+}
 .index-img{
-    margin: 70px;
-    width: 170px;
-    height: 140px;
+    margin: 80px;
+    margin-top: 5px;
+    width: 150px;
+    height: 200px;
+}
+.index-img-p{
+    margin-top: -35px;
+    margin-left: -20px;
+    width: 250px;
+    height: 180px;
+}
+.index-img-m{
+    margin-left: 0px;
+    margin-top: 100px;
+    width: 300px;
+    height: 260px;
 }
 
 
@@ -342,11 +634,13 @@ footer p{
 
 
 @media screen and (max-width: 576px){
+
+
 .header{
     background-image:linear-gradient(rgba(0,0,0,0.75), rgba(35, 107, 45, 0.15)), url(../img/job-search-600x400.jpg);
     background-size: cover;
     width: 100%;
-    height: 500px;
+    height: 573px;
 }
 .zagolovok{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -358,7 +652,7 @@ footer p{
     line-height: 50px;
     padding-top: 40px;
     color: white;
-    font-size: 34px;
+    font-size: 32px;
 }
     
 .zagolovok p{
@@ -367,6 +661,35 @@ footer p{
     font-size: 32px;
     color: #40CF8A;
 }
+
+
+
+.obomne{
+    margin-top: 250px;
+}
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block_obomne h3{
+    font-size: 40px;
+    text-align: center;
+}
+
+.block_obomne p{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    font-family: arial;
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
 
  /*Заявка*/
 
@@ -426,11 +749,11 @@ footer p{
     background-image:linear-gradient(rgba(0,0,0,0.75), rgba(35, 107, 45, 0.15)), url(../img/job-search-600x400.jpg);
     background-size: cover;
     width: 100%;
-    height: 350px;
+    height: 450px;
 }
 .zagolovok{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: -280px;
+    margin-top: -320px;
     text-align: center;
 }
 .zagolovok h3{
@@ -441,11 +764,66 @@ footer p{
 }
         
 .zagolovok p{
-    padding-top: 30px;
+    padding-top: 70px;
     font-weight: bold;
     font-size: 30px;
     color: #40CF8A;
 }
+
+
+.obomne{
+    margin-top: 250px;
+}
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block_obomne h3{
+    font-size: 35px;
+    text-align: center;
+}
+
+.block_obomne p{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    font-family: arial;
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+
+.index-img1{
+    position: relative;
+    top:-20px;
+    margin: 50px;
+    width: 250px;
+ 
+}
+.index-img{
+    margin: 80px;
+    margin-top: 5px;
+    width: 130px;
+    height: 200px;
+}
+.index-img-p{
+    margin-top: -35px;
+    margin-left: -20px;
+    width: 200px;
+    height: 150px;
+}
+.index-img-m{
+    margin-left: -25px;
+    margin-top: 60px;
+    width: 200px;
+    height: 260px;
+}
+
+
 
  /*Заявка*/
 
