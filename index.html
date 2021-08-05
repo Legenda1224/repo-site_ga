@@ -11,17 +11,35 @@
     <title>Портфолио</title>
 </head>
 <body>
+    <div class="burger-menu">
+        <a href="" class="burger-menu_button">
+          <spun class="burger-menu_lines"></spun>
+        </a>
+        <nav class="burger-menu_nav">
+          <a href="index.html" class="burger-menu_link">Главная</a>
+          <a href="#Обо мне" class="burger-menu_link">Обо мне</a>
+          <a href="#Мои навыки" class="burger-menu_link">Навыки</a>
+          <a href="#ОТПРАВИТЬ ЗАЯВКУ" class="burger-menu_link">Заявка</a>
+          <a href="#Контакты" class="burger-menu_link">Контакты</a>
+        </nav>
+        <div class="burger-menu_overlay"></div>
+      </div>
+      
+    <div class="strelka">
+        <a class="strelka-img1" href=index.html><img class="strelka-img2" src="./img/strelka2.png" alt=""></a>
+    </div>
+
     <header class="header" id="header">
-        <nav class="navbar navbar-expand-lg  navbar-dark pt-0 pb-0 ">
+        <nav class="navbar navbar-expand-lg  navbar-dark pt-0 pb-0">
             <div class="container">
                 <a href="index.html" class="navbar-brand">
-                <a href="#" class="navbar-brand" id="nomer">+7 961-854-1042</a>
+                <a href="tel:+7 961-854-1042" class="navbar-brand" id="nomer">+7 961-854-1042</a>
                 </a>
-                <div class=" collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <ul class="menu">
-                            <li id="col-xl-6 text">
-                                <a href="index.html" class="font-weight-bold ">Главная</a>
+                            <li id="text">
+                                <a href="index.html" class="glavnaya font-weight-bold ">Главная</a>
                             </li>
                             <li id="text">
                                 <a href="#Обо мне" class="font-weight-bold">Обо мне</a>
@@ -43,7 +61,7 @@
 
     <div class="zagolovok">
         <h3>
-            ДОБРЫЙ ДЕНЬ<br>
+            ПРИВЕТСТВУЮ<br>
             Я РОМАН НИКОЛАЕВИЧ
         </h3>
         <p>
@@ -51,16 +69,17 @@
         </p>
     </div>
   </div>
+
+  
 <a name="Обо мне">
 <div class="obomne">
 </a>
     <div class="d-flex">
         <div class="block_obomne">
-            <p>
+            <h3>
                 Обо мне
-            </p>
-        </div>
-        <div class="block_obomne2">
+            </h3>
+            
             <p>
                 Здравсвуйте меня зовут Роман,
                 живу в Краснодаре занимаюсь 
@@ -71,6 +90,8 @@
         </div>
     </div>
  </div>
+
+
     <div class="naviki">
 <a name="Мои навыки">
         <div class="container">
@@ -79,15 +100,16 @@
         </h3>
 </a>
         <div class="kartinki">
-			<img class="index-img" src="./img/bootstrap-logo-vector-png-alternate-image-for-bootstrap-480.png" alt="">
-			<img class="index-img" src="./img/css.jpg" alt="">
-			<img class="index-img" src="./img/849d4286475e04155fd5f21861f16f53db95ac72.png" alt="">
-            <img class="index-img" src="./img/js_thumb.jpg" alt="">
-			<img class="index-img" src="./img/php.png" alt="">
-			<img class="index-img" src="./img/MYSQL--810x410.png" alt="">
+            <img class="index-img" src="./img/849d4286475e04155fd5f21861f16f53db95ac72.svg" alt="">
+			<img class="index-img" src="./img/css.svg" alt="">
+            <img class="index-img" src="./img/js_thumb.svg" alt="">
+            <img class="index-img1" src="./img/bootstrap-logo-vector-png-alternate-image-for-bootstrap-480.svg" alt="">
+			<img class="index-img-p" src="./img/php.png" alt="">
+			<img class="index-img-m" src="./img/MYSQL--810x410.svg" alt="">
         </div>
     </div>
  </div>
+
  <a name="ОТПРАВИТЬ ЗАЯВКУ">
  <div class="fon">
  </a>
@@ -103,16 +125,16 @@
        <div class="work">
           <input type="text" name="text" placeholder="Имя">
           <input type="text" name="text" placeholder="Email">
-          <textarea name="message"  placeholder="Введите сообщение"></textarea>
+          <textarea type="message" name="message"  placeholder="Введите сообщение"></textarea>
           <input id="knopka_input" type="submit" value="Отправить">
         </div>
   </div>
 </div>
 <footer>
     <div class="logo">
-        <a href="#"><img class="img-logo" src="./img/imgpreview.png" alt=""></a>
-        <a href="#"><img class="img-logo" src="./img/imgpreview.png" alt=""></a>
-        <a href="#"><img class="img-logo" src="./img/imgpreview.png" alt=""></a>
+        <a href="https://vk.com/id446680038"><img class="img-logo" src="./img/imgpreview.png" alt=""></a>
+        <a href="https://www.instagram.com/roma.12melnikov24/"><img class="img-logo" src="./img/inst.png" alt=""></a>
+        <a href="https://www.facebook.com/profile.php?id=100034185335572"><img class="img-logo" src="./img/facebook.jpg" alt=""></a>
     </div>
     <a name="Контакты">
         <p>
@@ -123,7 +145,7 @@
     </a>
 </footer>
     
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src=./js/script.js></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src=./js/script.js></script>
 </body>
 </html>
