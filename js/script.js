@@ -23,4 +23,29 @@ function burgerMenu(selector) {
     }
   }
   
-  burgerMenu('.burger-menu');
+burgerMenu('.burger-menu');
+
+
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+})
+
+
+
+function onEntry(entry) {
+    entry.forEach(change => {
+    if (change.isIntersecting) {
+    change.target.classList.add('element-show');
+    }
+    });
+  }
+  
+  let options = {
+    threshold: [0.5] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('.scroll');
+  
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
