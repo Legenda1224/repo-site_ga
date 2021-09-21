@@ -1,8 +1,80 @@
+html{
+    scroll-behavior: smooth;
+}
+
+html {
+    scrollbar-width: normal;
+}
+
+html::-webkit-scrollbar {
+    width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #ec7200;
+}
+
+
 body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+.scroll{
+    opacity: 0;
+    transform: translateY(20px);
+}
+.scroll.element-show{
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translatex(0%);
+}
+
+/*strelka*/
+
+.strelka{
+    position: fixed;
+    z-index: 40;
+    right: 25px;
+    bottom: 30px;
+    background: #ec7200;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.strelka::before{
+    transform: rotate(140deg);
+    left: 5px;
+    top: 21px;
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    background: white;
+}
+
+.strelka::after{
+    transform: rotate(45deg);
+    left: 21px;
+    top: 22px;
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    background: white;
+}
+
+.strelka:hover{
+   box-shadow: 0px 0px 10px 0px #ec7200,
+   0px 0px 20px 0px #ec7200,
+   0px 0px 40px 0px #ec7200,
+   0px 0px 60px 0px #ec7200;
+}
+
+
 
 /*Бургер меню*/
 
@@ -36,9 +108,10 @@ body{
 .burger-menu_lines::after,
 .burger-menu_lines {
     position: absolute;
+	z-index:2003;
     width: 35px;
     height: 3px;
-    background-color: #ffffff;
+    background-color: rgb(0, 161, 182);
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
@@ -55,13 +128,13 @@ body{
 .burger-menu_lines::before {
 
     content: '';
-    top: -12px;
+    top: -10px;
 }
 
 .burger-menu_lines::after {
     width: 20px;
     content: '';
-    top: 12px;
+    top: 10px;
 }
 
 
@@ -189,27 +262,6 @@ body{
 }
 
 
-/* .fon span{
-    animation: anims 3s;
-    position: absolute;
-    width: 1020px;
-    height: 3px;
-    background-color: rgb(250, 72, 2);
-    box-shadow: 0px 0px 2px 2px rgb(250, 72, 2);
-}
-
-
-@keyframes anims{
-0%{
-    width: 0px;
-    height: 3px;
-    box-shadow: 0px 0px 0px 0px rgb(250, 72, 2);
-}
-100%{
-
-}
-} */
-
 
 .zagolovok p{
     animation: animp 3s;
@@ -274,7 +326,7 @@ header{
     top: 0;
     position: fixed;
     width: 100%;
-    height: 100px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -283,7 +335,7 @@ header{
 header.sticky{
     transition: 0.3s ease-in-out;
     /* background-color: #042348; */
-    background-color: #000000;
+    background-color: white;
 }
 
 .logo{
@@ -302,22 +354,28 @@ header.sticky{
     
 }
 
-
+header.sticky .nav-link a{
+	color:black;
+}
+header.sticky .nav-link a:hover{
+    text-shadow: 1px 1px 2px rgb(0, 65, 139), 0 0 1em rgb(207, 66, 0);
+	color: rgb(255, 136, 0);
+}
 .nav-link a{
     font-weight: 600;
     position: relative;
     z-index: 80;
-    padding: 0px 20px;
+    padding: 0px 15px;
     font-size: 15px;
     text-transform: uppercase;
     font-family: arial;
-    color:white;
+    color:rgb(255, 255, 255);
     text-decoration: none;
     transition: 0.3s ease-in-out;
 }
 
 .nav-link a:hover{
-    color: #fd7a00;
+    color: rgb(0, 65, 139);
 }
 
 
@@ -395,26 +453,17 @@ button a{
 }
 
 
-/*Услуги*/
+/*О компании*/
 
-.container{
-    position: relative;
+
+.kompaniya{
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0px 50px;
 }
 
-.scroll{
-    opacity: 0;
-    transform: translateY(20px);
-}
-.scroll.element-show{
-    opacity: 1;
-    transition: all 1.5s;
-    transform: translatex(0%);
-}
-
-.uslugi h3{
-    padding-top: 100px;
+.pod_kompaniya h3{
+    padding-top: 110px;
     text-transform: uppercase;
     font-family: arial;
     font-size: 40px;
@@ -422,9 +471,66 @@ button a{
     color: black;
 }
 
+.pod_kompaniya h3::before{
+    box-shadow: 0px 0px 10px 0px orange,
+    0px 0px 20px 0px orange,
+    0px 0px 40px 0px orange,
+    0px 0px 60px 0px orange,
+    0px 0px 80px 0px orange;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 275px;
+    height: 2px;
+    background-color: orange;
+}
 
+.d-flex_img_p p{
+    line-height: 30px;
+    text-align: center;
+    font-size: 17px;
+    padding: 20px 0px 110px 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*Услуги*/
+
+.container{
+    overflow: hidden;
+	padding:0px 0px 120px 0px ;
+	position:absolute;
+	width:100%;
+	background-color:black;
+}
+
+
+
+.uslugi h3{
+    padding-top: 100px;
+    text-transform: uppercase;
+    font-family: arial;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+
+.uslugi h3::before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 295px;
+    height: 2px;
+    box-shadow: 0px 0px 10px 2px white,
+    0px 0px 20px 0px white,
+    0px 0px 40px 0px white,
+    0px 0px 60px 0px white,
+    0px 0px 80px 0px white;
+    background: white;
+    background-color: rgb(255, 255, 255);
+}
 .d_flex{
-    padding-top: 50px;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -432,31 +538,46 @@ button a{
 }
 
 .block1{
-    box-shadow: 0px 0px 10px 0px gray;
+	color: white;
+	text-align: center;
+    padding: 0px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+    box-shadow: 0px 0px 10px 10px orange;
     margin: 20px;
     width: 350px;
     height: 400px;
     background:linear-gradient(to bottom, rgb(235, 106, 0), rgb(235, 106, 0));
 }
 
+.scroll2{
+    opacity: 0;
+    transform: translatex(-220px);
+}
+.scroll2.element-show{
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translatex(0%);
+}
+
+
+i{
+	margin-top:0px;
+	font-size:70px;
+}
 
 
 
-.text{
-    text-align: center;
-    padding: 0px 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 30px;
-    height: 500px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.block1 h3{
+	font-size: 25px;
+	padding-top:0px;
 }
 
 .block1 p{
-    color: white;
+	margin-top:0px;
     text-align: center;
     font-size: 16px;
 
@@ -464,16 +585,42 @@ button a{
 
 
 .block2{
-    transform: scale(1.1);
-    box-shadow: 0px 0px 10px 0px gray;
+	color: white;
+    transform: scaley(1.2);
+	text-align: center;
+    padding: 0px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+    /* box-shadow: 0px 0px 10px 10px orange; */
+    box-shadow: 0px 0px 10px 10px rgb(0, 128, 167);
     margin: 20px;
     width: 350px;
     height: 400px;
-    background:linear-gradient(to bottom, rgb(235, 106, 0), rgb(235, 106, 0));
+    background:linear-gradient(to bottom, rgb(0, 180, 235), rgb(0, 180, 235));
+}
+
+.scroll3{
+    opacity: 0;
+    transform: translatey(150px);
+}
+.scroll3.element-show{
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translatex(0%);
+}
+
+.block2 i{
+	font-size:80px;
+}
+.block2 h3{
+	font-size: 27px;
+	padding-top:0px;
 }
 
 .block2 p{
-    color: white;
     text-align: center;
     font-size: 16px;
 
@@ -481,20 +628,65 @@ button a{
 
 
 .block3{
-    box-shadow: 0px 0px 10px 0px gray;
+	color: white;
+	text-align: center;
+    padding: 0px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+    box-shadow: 0px 0px 10px 10px orange;
     margin: 20px;
     width: 350px;
     height: 400px;
     background:linear-gradient(to bottom, rgb(235, 106, 0), rgb(235, 106, 0));
 }
+
+.scroll4{
+    opacity: 0;
+    transform: translateX(220px);
+}
+.scroll4.element-show{
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translatex(0%);
+}
+
+.block3 h3{
+	font-size: 25px;
+	padding-top:0px;
+}
+
 .block3 p{
-    color: white;
     text-align: center;
     font-size: 16px;
 
 }
 
 
+
+
+
+@media (max-width: 1290px){
+	.block2{
+    transform: scale(1.0);
+}
+}
+@media (max-width: 1200px){
+
+
+.zagolovok{
+    padding: 0px 100px;
+}
+.zagolovok h3{
+    font-size: 27px;
+    line-height: 45px;
+}
+.zagolovok p{
+    font-size: 20px;
+}
+}
 
 
 @media (max-width: 991px){
@@ -509,8 +701,8 @@ button a{
     padding: 0px 100px;
 }
 .zagolovok h3{
-    font-size: 30px;
-    line-height: 53px;
+    font-size: 27px;
+    line-height: 45px;
 }
 .zagolovok p{
     font-size: 20px;
@@ -521,10 +713,10 @@ button a{
 @media (max-width: 768px){
 
 .zagolovok{
-    padding: 50px 40px;
+    padding: 0px 50px;
 }
 .zagolovok h3{
-    font-size: 25px;
+    font-size: 23px;
     line-height: 40px;
 }
 .zagolovok p{
@@ -544,6 +736,92 @@ button a{
 
 .zagolovok{
     padding: 50px 40px;
+}
+.zagolovok h3{
+    font-size: 20px;
+    line-height: 30px;
+}
+.zagolovok p{
+    padding: 0px 0px 0px 0px ;
+    font-size: 16px;
+}
+
+
+
+
+.kompaniya{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.pod_kompaniya h3{
+    padding-top: 110px;
+    font-size: 35px;
+}
+
+.pod_kompaniya h3::before{
+    width: 238px;
+}
+
+.d-flex_img_p p{
+    line-height: 30px;
+    font-size: 16px;
+}
+
+
+
+.uslugi h3{
+    padding-top: 100px;
+    text-transform: uppercase;
+    font-family: arial;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+}
+
+
+.uslugi h3::before{
+    width: 260px;
+    height: 2px;
+}
+}
+
+@media (max-width: 500px){
+
+	
+.block1{
+    margin: 30px;
+    width: 220px;
+    height: 440px;
+}
+.block2{
+    margin: 30px;
+    width: 220px;
+    height: 470px;
+}
+.block3{
+    margin: 30px;
+    width: 220px;
+    height: 470px;
+}
+}
+
+
+
+
+
+
+@media (max-width: 400px){
+
+.kompaniya{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+.zagolovok{
+    padding: 0px 20px;
 }
 .zagolovok h3{
     font-size: 20px;
