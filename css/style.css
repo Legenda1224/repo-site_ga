@@ -2,6 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 
+
 html {
     
     scrollbar-width: normal;
@@ -385,6 +386,7 @@ header.sticky .nav-link a:hover{
 
 
 button{
+
     cursor: pointer;
     animation: button 4s;
     border-radius: 10px;
@@ -393,7 +395,6 @@ button{
     margin-top: 20px;
     padding: 13px;
     background: none;
-    
     transition: 0.3s ease-in-out;
 }
 
@@ -502,7 +503,7 @@ button a{
 
 .container{
     overflow: hidden;
-	padding:0px 0px 120px 0px ;
+	padding:0px 0px 150px 0px ;
 	background-color: #0d1218;
 }
 
@@ -670,6 +671,7 @@ i{
 
 
 /*Портфолио*/
+
 
 
 .portfolio_h3 h3{
@@ -895,7 +897,6 @@ i{
     width: 350px;
     height: 200px;
 }
-
 
 
 /*Контакты*/
@@ -1403,8 +1404,8 @@ button{
 .footer{
     font-size: 15px;
 }
-
 }
+
 
 
 
